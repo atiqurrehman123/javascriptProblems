@@ -143,7 +143,7 @@
 //         }else{
 //             result+="*"
 //         }
-    
+
 //     }
 
 //     result += "\n"
@@ -179,7 +179,7 @@
 //         }
 //     }
 //     result +="\n"
-    
+
 // }
 // console.log(result)
 
@@ -192,19 +192,72 @@
 //   *****
 //    ***
 //     *
+// let n = 5;
+// let result = ""
+// for (let i = 1; i <= n; i++) {
+
+//     // FOR PRINTING SPACES
+//     for (let j = 1; j <= n - i; j++) {
+//         result += " "
+//     }
+
+//     //printing stars
+//     for (let k = 1; k <= 2 * i - 1; k++) {
+//         result+="*"        
+//     }
+//     result += "\n"
+
+// }
+// for (let row = 1; row <= n; row++) {
+//     // for Printing spaces
+//     for(let s=1;s<=row;s++){
+//         result +=" "
+//     }
+//     for (let k = (n - row) * 2 - 1; k > 0; k--) {
+//         result += "*";
+//     }
+
+//     result += "\n"
+
+// }
+// console.log(result)
+//     *
+//    * *
+//   *   *
+//  *     *
+// *       *
+//  *     *
+//   *   *
+//    * *
+//     *
 let n = 5;
 let result = ""
-for (let i = 1; i <= n; i++) {
+for (let row = 1; row <= n; row++) {
 
     // FOR PRINTING SPACES
-    for (let j = 1; j <= n - i; j++) {
+    for (let j = 1; j <= n - row; j++) {
         result += " "
     }
 
     //printing stars
-    for (let k = 1; k <= 2 * i - 1; k++) {
-        result+="*"        
+    for (let k = 1; k <= 2 * row - 1; k++) {
+        if(k===1 || k===2*row-2){
+            if(k===2){
+                result+=" "
+            }else{
+            result += "*"   
+            }     
+
+
+        }else{
+            result +=" "
+        }
     }
+    // if(row==2){
+    //     result+="\n"
+    //     break;
+
+    // }
     result += "\n"
 
 }
